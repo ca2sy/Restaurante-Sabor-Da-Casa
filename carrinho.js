@@ -57,7 +57,7 @@ form.onsubmit = async (e) => {
     await addDoc(collection(db, "pedidos"), pedidoFinal);
     alert("Pedido enviado com sucesso!");
     localStorage.removeItem("carrinho");
-    window.location.href = "inicio.html";
+    window.location.href = "index.html";
   } catch (e) {
     console.error("Erro ao enviar:", e);
     alert("Erro ao enviar pedido.");
