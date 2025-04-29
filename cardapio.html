@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    
+</head>
+<body>
+  <header class="header">
+    <h1 class="titulo">Cardápio</h1>
+
+  </header>
+
+
+<nav class="menu">
+    <ul>
+        <li><a href="inicio.html">Início</a></li>
+      <li><a href="historia.html">Sobre Nós</a></li>
+      <li><a href="carrinho.html">Carrinho</a></li> 
+    </ul>
+  </nav>
+<div id="cardapio"></div>
+
+<!-- Formulário de substituição (modal escondido por padrão) -->
+<div id="formulario-pedido" style="display:none;">
+  <h3>Deseja fazer alguma substituição?</h3>
+  <form id="form-substituicao">
+    <label for="alteracoes">Ex: Arroz por purê</label><br>
+    <input type="text" id="alteracoes" name="alteracoes" /><br><br>
+    <button type="submit">Adicionar ao carrinho</button>
+    <button type="button" id="cancelar-form">Cancelar</button>
+  </form>
+</div>
+  <div id="lista-pratos"></div>
+
+
+  <script type="module" src="cardapio.js"></script>
+  <script type="module" src="firebase.js">
+</script>
+</body>
+</html>

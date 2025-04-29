@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+        <li><a href="inicio.html">Início</a></li>
+        <li><a href="historia.html">Sobre Nós</a></li>
+        <li><a href="cardapio.html">Cardápio</a></li> 
+        </ul>
+    </nav>
+    <h1>Seu Carrinho</h1>
+<div id="lista-carrinho"></div>
+
+<h2 class="finalizar-pedido">Finalizar Pedido</h2>
+<form id="form-final">
+  <label>Nome:</label><br>
+  <input type="text" id="nome" required><br><br>
+
+  <label>Forma de pagamento:</label><br>
+  <select id="pagamento" required>
+    <option value="">Selecione</option>
+    <option>Pix</option>
+    <option>Cartão</option>
+    <option>Dinheiro</option>
+  </select><br><br>
+
+  <label>Entrega, Retirada ou Consumo local?</label><br>
+  <select id="entrega" required>
+    <option value="">Selecione</option>
+    <option>Entrega</option>
+    <option>Retirada</option>
+    <option>Consumo local</option>
+  </select><br><br>
+
+  <button type="submit">Enviar pedido</button>
+</form>
+
+<script type="module" src="script-carrinho.js"></script>
+
+    
+    <script type="module" src="carrinho.js" ></script>
+    <script type="module" src="firebase.js"> </script>
+</body>
+</html>

@@ -1,0 +1,552 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+
+body {
+    background-color: #f7f7f7;
+    color: #333;
+    font-size: 16px;
+}
+
+.texto p {
+    text-align: justify;
+    line-height: 1.6; 
+    margin-bottom: 20px; 
+  }
+
+
+.header {
+    background-color: #d32f2f; 
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.header h1 {
+    color: white;
+}
+
+
+.slogan {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+
+nav.menu {
+    background-color: #c62828; 
+    padding: 1rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav.menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+}
+
+nav.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+nav.menu a:hover {
+    background-color: #e91e63;
+    color: white;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+
+
+section img {
+    width: 100%; 
+    max-width: 400px; 
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px; 
+}
+
+
+.intro {
+    background-color: #fff8f1; 
+    padding: 3rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px; 
+}
+
+.intro .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.intro .texto {
+    flex: 1;
+    text-align: justify; 
+    width: 100%; 
+    margin-right: 20px;
+}
+
+.intro h1 {
+    color: #d32f2f;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+.pratos {
+    background-color: #ffebee; 
+    padding: 3rem 2rem;
+}
+
+.pratos .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.pratos .texto {
+    flex: 1;
+    text-align: justify;
+    width: 100%;
+    margin-right: 20px;
+}
+
+.pratos h2 {
+    color: #c62828;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.pratos p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+
+.endereco {
+    background-color: #ffebee; 
+    padding: 2rem;
+    margin-bottom: 3rem; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.endereco .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%; 
+}
+
+.endereco h2 {
+    color: #c62828;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.endereco p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify; 
+    flex: 1;
+}
+
+.endereco .mapa img {
+    width: 85%; 
+    max-width: 300px; 
+    height: auto; 
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #d32f2f; /* Vermelho intenso */
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+footer .contato p {
+    font-size: 1.1rem;
+}
+
+footer .contato a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer .contato a:hover {
+    text-decoration: underline;
+}
+
+
+
+.historia-intro .imagem img {
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
+  .historia-familia .imagem img {
+    max-height: 500px;
+    object-fit: cover;
+  }
+  
+  .crescimento .imagem img {
+    max-height: 450px;
+    object-fit: cover;
+  }
+  
+  .comunidade .imagem img {
+    max-height: 450px;
+    object-fit: cover;
+  }
+  
+ 
+  .texto {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  .texto h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .texto p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.7;
+  }
+  
+  .historia-intro .container,
+  .historia-familia .container,
+  .crescimento .container,
+  .comunidade .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .historia-intro .container .imagem,
+  .historia-familia .container .imagem,
+  .crescimento .container .imagem,
+  .comunidade .container .imagem {
+    flex: 1;
+    max-width: 45%;
+  }
+  
+  .historia-intro .container .texto,
+  .historia-familia .container .texto,
+  .crescimento .container .texto,
+  .comunidade .container .texto {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+  }
+  
+  footer .contato p {
+    font-size: 1.1rem;
+  }
+  
+  footer .contato strong {
+    font-weight: bold;
+  }
+  
+  footer .contato a {
+    color: #ff6347;
+    text-decoration: none;
+  }
+  
+  footer .contato a:hover {
+    text-decoration: underline;
+  }
+
+
+  .prato {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    max-width: 300px;
+  }
+  .prato img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .indisponivel img {
+    filter: grayscale(100%);
+  }
+  .formulario {
+    margin-top: 10px;
+  }
+
+  .pedido {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+
+  /* Estilos para o cardápio */
+#cardapio {
+    background-color: #ffebee; /* Cor de fundo */
+    padding: 5% 2%; /* Espaçamento nas laterais e topo/fundo */
+}
+
+#cardapio button {
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    padding: 2% 3%; 
+    width: 95%; 
+    background-color: white; 
+    text-align: center; 
+    margin-bottom: 5%; 
+    transition: all 0.3s ease; 
+    max-width: 250px;
+}
+
+#cardapio button:hover {
+    transform: scale(1.05);
+}
+
+#cardapio img {
+    width: 100%; 
+    border-radius: 10px; 
+    margin-bottom: 10%; 
+    max-height: 150px; 
+    object-fit: cover; 
+}
+
+#cardapio .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+
+.indisponivel img {
+    filter: grayscale(100%); 
+}
+
+#cardapio button {
+    margin: 5% auto; 
+    display: block;
+}
+
+#cardapio h2 {
+    font-size: 150%;       
+    margin-top: 5%;            
+    margin-bottom: 3%;         
+    text-align: center;            
+    color: #333333;                
+    font-weight: bold;
+    border-bottom: 0.2em solid #ccc;
+    padding-bottom: 1%;           
+  }
+  
+
+
+#formulario-pedido {
+    background-color: #fff;
+    padding: 3%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 5% auto;
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#formulario-pedido h3 {
+    color: #d32f2f;
+    font-size: 1.8rem;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+#formulario-pedido label {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 1%;
+    display: block;
+}
+
+#formulario-pedido input[type="text"] {
+    width: 100%;
+    padding: 1.5%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-bottom: 2%;
+}
+
+#formulario-pedido button {
+    background-color: #d32f2f;
+    color: white;
+    padding: 2% 5%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+#formulario-pedido button:hover {
+    background-color: #c62828;
+}
+
+#cancelar-form {
+    background-color: #aaa;
+    width: 100%;
+}
+
+#cancelar-form:hover {
+    background-color: #777;
+}
+
+#formulario-pedido::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+h1 {
+    color: #d32f2f;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2%;
+}
+
+#lista-carrinho {
+    padding: 3%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+}
+
+#lista-carrinho .pedido {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#lista-carrinho .pedido .info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5%;
+}
+
+#lista-carrinho .pedido .info span {
+    font-size: 1rem;
+    color: #333;
+}
+
+#lista-carrinho .pedido .preco {
+    font-weight: bold;
+    color: #d32f2f;
+    font-size: 1.1rem;
+}
+
+#form-final {
+    margin: 0 auto; 
+    padding: 20px;
+    width: 100%; 
+    max-width: 600px; 
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+}
+
+#form-final label {
+    display: block; 
+    margin-bottom: 10px; 
+    font-size: 1.1rem;
+}
+
+#form-final input,
+#form-final select {
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#form-final button {
+    background-color: #d32f2f;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+#form-final button:hover {
+    background-color: #c62828;
+}
+
+.finalizar-pedido {
+    text-align: center; 
+    margin: 20px auto; 
+}
