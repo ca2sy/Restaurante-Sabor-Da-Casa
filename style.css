@@ -324,10 +324,9 @@ footer .contato a:hover {
     border-radius: 10px;
   }
 
-  /* Estilos para o cardápio */
 #cardapio {
-    background-color: #ffebee; /* Cor de fundo */
-    padding: 5% 2%; /* Espaçamento nas laterais e topo/fundo */
+    background-color: #ffebee;
+    padding: 5% 2%; 
 }
 
 #cardapio button {
