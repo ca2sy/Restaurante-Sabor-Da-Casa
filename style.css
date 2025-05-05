@@ -1,213 +1,176 @@
-
-* {
+:root {
+    --primary-color: #b71c1c;
+    --secondary-color: #fbe9e7;
+    --accent-color: #ff7043;
+    --text-color: #333;
+    --light-text: #666;
+    --white: #fff;
+    --radius: 12px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --max-width: 1200px;
+  }
+  
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-}
-
-
-body {
-    background-color: #f7f7f7;
-    color: #333;
-    font-size: 16px;
-}
-
-.texto p {
-    text-align: justify;
-    line-height: 1.6; 
-    margin-bottom: 20px; 
   }
-
-
-.header {
-    background-color: #d32f2f; 
-    color: white;
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 2rem 1rem;
+  }
+  
+  .header {
+    background: linear-gradient(135deg, var(--primary-color), #880e4f);
+    color: var(--white);
     text-align: center;
-    padding: 2rem 0;
-}
-
-.header h1 {
-    color: white;
-}
-
-
-.slogan {
+    padding: 3rem 1rem;
+    box-shadow: var(--shadow);
+  }
+  
+  .header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+  }
+  
+  .slogan {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #ffe0b2;
+  }
+  
+  
+  .slogan {
     font-size: 1.2rem;
     font-style: italic;
-}
-
-
-nav.menu {
-    background-color: #c62828; 
-    padding: 1rem 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-nav.menu ul {
+  }
+  
+  nav.menu {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+  }
+  
+  nav.menu ul {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 2rem;
+    padding: 1rem;
     list-style: none;
-}
-
-nav.menu a {
-    color: white;
+    flex-wrap: wrap;
+  }
+  
+  nav.menu a {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
     text-decoration: none;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s;
-}
-
-nav.menu a:hover {
-    background-color: #e91e63;
+    font-weight: 600;
+    padding: 0.7rem 1.2rem;
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  
+  nav.menu a:hover {
+    background-color: var(--accent-color);
     color: white;
-}
+  }
+  
+  
+  section {
+    margin-bottom: 4rem;
+    padding: 2rem 0;
+  }
 
-section {
-    margin-bottom: 3rem;
-}
-
-
-
-section img {
-    width: 100%; 
-    max-width: 400px; 
-    height: auto;
-    border-radius: 10px;
-    margin-top: 20px; 
-}
-
-
-.intro {
-    background-color: #fff8f1; 
-    padding: 3rem 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px; 
-}
-
-.intro .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-.intro .texto {
-    flex: 1;
-    text-align: justify; 
-    width: 100%; 
-    margin-right: 20px;
-}
-
-.intro h1 {
-    color: #d32f2f;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.intro p {
-    color: #555;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-
-.pratos {
-    background-color: #ffebee; 
-    padding: 3rem 2rem;
-}
-
-.pratos .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.pratos .texto {
-    flex: 1;
-    text-align: justify;
-    width: 100%;
-    margin-right: 20px;
-}
-
-.pratos h2 {
-    color: #c62828;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.pratos p {
-    color: #555;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-
-
+  .intro,
+.pratos,
 .endereco {
-    background-color: #ffebee; 
-    padding: 2rem;
-    margin-bottom: 3rem; 
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+  
+section img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  
+  
+  .intro,
+  .pratos,
+  .endereco {
+    padding: var(--section-padding);
+  }
+  
+  .intro .container,
+  .pratos .container,
+  .endereco .container {
     display: flex;
-    justify-content: space-between; 
+    flex-wrap: wrap;
     align-items: center;
-}
-
-.endereco .container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    width: 100%; 
-}
-
-.endereco h2 {
-    color: #c62828;
+    gap: 2rem;
+  }
+  
+  .intro h1,
+  .pratos h2,
+  .endereco h2 {
     font-size: 2rem;
+    color: var(--primary-color);
     margin-bottom: 1rem;
-}
-
-.endereco p {
-    color: #555;
-    font-size: 1.1rem;
+  }
+  
+  .texto p,
+  .pratos p,
+  .endereco p {
+    text-align: justify;
     line-height: 1.6;
-    text-align: justify; 
-    flex: 1;
-}
-
-.endereco .mapa img {
-    width: 85%; 
-    max-width: 300px; 
-    height: auto; 
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    color: #555;
+  }
+  
+  .endereco .mapa img {
+    width: 100%;
+    max-width: 300px;
     border-radius: 10px;
-}
-
-footer {
-    background-color: #d32f2f; /* Vermelho intenso */
+  }
+  
+  footer {
+    background-color: var(--primary-color);
     color: white;
-    padding: 1.5rem 0;
+    padding: 1.5rem 1rem;
     text-align: center;
-}
-
-footer .contato p {
+  }
+  
+  footer .contato p {
     font-size: 1.1rem;
-}
-
-footer .contato a {
-    color: #ffffff;
-    text-decoration: none;
+  }
+  
+  footer .contato a {
+    color: white;
     font-weight: bold;
-}
-
-footer .contato a:hover {
+    text-decoration: none;
+  }
+  
+  footer .contato a:hover {
     text-decoration: underline;
-}
-
+  }
+  
 
 
 .historia-intro .imagem img {
@@ -237,9 +200,18 @@ footer .contato a:hover {
   }
   
   .texto h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  .texto h2::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-color);
+    left: 0;
+    bottom: 0;
   }
   
   .texto p {
@@ -273,32 +245,13 @@ footer .contato a:hover {
     max-width: 50%;
   }
   
-  
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1.5rem 0;
-  }
-  
-  footer .contato p {
-    font-size: 1.1rem;
-  }
-  
-  footer .contato strong {
-    font-weight: bold;
-  }
-  
-  footer .contato a {
-    color: #ff6347;
-    text-decoration: none;
-  }
-  
-  footer .contato a:hover {
-    text-decoration: underline;
-  }
 
+.historia-familia .container,
+.comunidade .container {
+  flex-direction: row-reverse;
+}
 
+  
   .prato {
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -324,35 +277,65 @@ footer .contato a:hover {
     border-radius: 10px;
   }
 
-#cardapio {
-    background-color: #ffebee;
-    padding: 5% 2%; 
-}
+  #cardapio {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #fff;
+  }
+  
 
-#cardapio button {
-    border: 1px solid #ccc; 
-    border-radius: 10px; 
-    padding: 2% 3%; 
-    width: 95%; 
-    background-color: white; 
-    text-align: center; 
-    margin-bottom: 5%; 
-    transition: all 0.3s ease; 
-    max-width: 250px;
-}
-
-#cardapio button:hover {
+  .prato-btn {
+    display: block;
+    background-color: #fafafa;
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1rem;
+  }
+  
+  .prato-btn:hover {
     transform: scale(1.05);
-}
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .prato-btn img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .prato-btn strong {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .prato-btn.indisponivel {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  
+  .prato-btn .vegetariano {
+    font-size: 1rem;
+    color: green;
+  }
+  
+  .prato-btn .alergicos {
+    font-size: 1rem;
+    color: red;
+  }
 
-#cardapio img {
-    width: 100%; 
-    border-radius: 10px; 
-    margin-bottom: 10%; 
-    max-height: 150px; 
-    object-fit: cover; 
-}
 
+/* Container do Cardápio */
 #cardapio .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -361,33 +344,34 @@ footer .contato a:hover {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-
-.indisponivel img {
-    filter: grayscale(100%); 
 }
 
+/* Estilos de Indisponibilidade */
+.indisponivel img {
+    filter: grayscale(100%);
+}
+
+/* Estilo dos botões do cardápio */
 #cardapio button {
-    margin: 5% auto; 
+    margin: 5% auto;
     display: block;
 }
 
+/* Títulos das seções */
 #cardapio h2 {
-    font-size: 150%;       
-    margin-top: 5%;            
-    margin-bottom: 3%;         
-    text-align: center;            
-    color: #333333;                
+    font-size: 150%;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    text-align: center;
+    color: #333333;
     font-weight: bold;
     border-bottom: 0.2em solid #ccc;
-    padding-bottom: 1%;           
-  }
-  
+    padding-bottom: 1%;
+}
 
-
+/* Estilos do Formulário de Pedido */
 #formulario-pedido {
-    background-color: #fff;
+    background-color: #f4f4f4; /* Alterado para cinza claro */
     padding: 3%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -398,8 +382,10 @@ footer .contato a:hover {
     top: 20%;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 100; /* Garantir que o formulário fique sobre os outros elementos */
 }
 
+/* Título do Formulário */
 #formulario-pedido h3 {
     color: #d32f2f;
     font-size: 1.8rem;
@@ -407,6 +393,7 @@ footer .contato a:hover {
     text-align: center;
 }
 
+/* Estilos dos campos do formulário */
 #formulario-pedido label {
     font-size: 1.1rem;
     color: #333;
@@ -423,6 +410,7 @@ footer .contato a:hover {
     margin-bottom: 2%;
 }
 
+/* Botões do formulário */
 #formulario-pedido button {
     background-color: #d32f2f;
     color: white;
@@ -436,19 +424,23 @@ footer .contato a:hover {
     margin-bottom: 1%;
 }
 
+/* Hover no botão */
 #formulario-pedido button:hover {
     background-color: #c62828;
 }
 
+/* Botão de Cancelar */
 #cancelar-form {
     background-color: #aaa;
     width: 100%;
 }
 
+/* Hover no botão de cancelar */
 #cancelar-form:hover {
     background-color: #777;
 }
 
+/* Fundo escurecido atrás do formulário */
 #formulario-pedido::before {
     content: "";
     position: fixed;
@@ -456,9 +448,10 @@ footer .contato a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2); /* Tornando o fundo mais leve */
     z-index: -1;
 }
+
 
 h1 {
     color: #d32f2f;
