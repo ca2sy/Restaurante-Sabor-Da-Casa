@@ -1,15 +1,4 @@
-:root {
-    --primary-color: #b71c1c;
-    --secondary-color: #fbe9e7;
-    --accent-color: #ff7043;
-    --text-color: #333;
-    --light-text: #666;
-    --white: #fff;
-    --radius: 12px;
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    --max-width: 1200px;
-  }
-  
+
   
   * {
     margin: 0;
@@ -17,33 +6,34 @@
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
   }
-  
+   /* body */
+
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f9f9f9;
-    color: var(--text-color);
+    color: #333;
     font-size: 1rem;
     line-height: 1.6;
   }
   
   .container {
-    max-width: var(--max-width);
+    max-width: 1200px;
     margin: auto;
     padding: 2rem 1rem;
   }
   
   .header {
-    background: linear-gradient(135deg, var(--primary-color), #880e4f);
-    color: var(--white);
+    background: linear-gradient(135deg, #b71c1c, #880e4f); /* degrade mt fofo */
+    color: white;
     text-align: center;
     padding: 3rem 1rem;
-    box-shadow: var(--shadow);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
   .header h1 {
     font-size: 2.8rem;
     margin-bottom: 0.5rem;
-    color: var(--secondary-color);
+    color: #fbe9e7;
   }
   
   .slogan {
@@ -59,8 +49,8 @@
   }
   
   nav.menu {
-    background-color: var(--white);
-    box-shadow: var(--shadow);
+    background-color: rgb(248, 229, 229);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   }
   
   nav.menu ul {
@@ -69,22 +59,21 @@
     gap: 2rem;
     padding: 1rem;
     list-style: none;
-    flex-wrap: wrap;
   }
   
   nav.menu a {
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
+    color: #b71c1c;
+    background-color: #fbe9e7;
     text-decoration: none;
     font-weight: 600;
     padding: 0.7rem 1.2rem;
-    border-radius: var(--radius);
+    border-radius: 12px;
     transition: all 0.3s ease;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   }
   
   nav.menu a:hover {
-    background-color: var(--accent-color);
+    background-color: #ff7043;
     color: white;
   }
   
@@ -97,31 +86,30 @@
   .intro,
 .pratos,
 .endereco {
-  background-color: var(--white);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
   
 section img {
     width: 100%;
     max-width: 420px;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   }
   
   
   .intro,
   .pratos,
   .endereco {
-    padding: var(--section-padding);
+    padding: 3%;
   }
   
   .intro .container,
   .pratos .container,
   .endereco .container {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     gap: 2rem;
   }
@@ -130,7 +118,7 @@ section img {
   .pratos h2,
   .endereco h2 {
     font-size: 2rem;
-    color: var(--primary-color);
+    color: #b71c1c;
     margin-bottom: 1rem;
   }
   
@@ -151,7 +139,7 @@ section img {
   }
   
   footer {
-    background-color: var(--primary-color);
+    background-color: #b71c1c;
     color: white;
     padding: 1.5rem 1rem;
     text-align: center;
@@ -172,25 +160,26 @@ section img {
   }
   
 
+  /* css da parte Sobre nós  */ 
 
 .historia-intro .imagem img {
     max-height: 400px;
-    object-fit: cover;
+   
   }
   
   .historia-familia .imagem img {
     max-height: 500px;
-    object-fit: cover;
+  
   }
   
   .crescimento .imagem img {
     max-height: 450px;
-    object-fit: cover;
+    
   }
   
   .comunidade .imagem img {
     max-height: 450px;
-    object-fit: cover;
+   
   }
   
  
@@ -209,7 +198,7 @@ section img {
     position: absolute;
     width: 60px;
     height: 4px;
-    background-color: var(--accent-color);
+    background-color:  #ff7043;
     left: 0;
     bottom: 0;
   }
@@ -252,6 +241,9 @@ section img {
 }
 
   
+
+/* css cardapio */
+
   .prato {
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -259,6 +251,7 @@ section img {
     margin-bottom: 15px;
     max-width: 300px;
   }
+
   .prato img {
     width: 100%;
     border-radius: 10px;
@@ -266,6 +259,7 @@ section img {
   .indisponivel img {
     filter: grayscale(100%);
   }
+
   .formulario {
     margin-top: 10px;
   }
@@ -282,17 +276,37 @@ section img {
     flex-direction: column;
     gap: 2rem;
     padding: 2rem;
-    background-color: #fff;
+    background-color: #f8f4ec;;
   }
   
+  #cardapio .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#cardapio h2 {
+  margin-top: 2rem ;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  margin-bottom: 0.5rem; 
+  font-size: 1.8rem;
+  color: #8b4513;
+  border-bottom: 2px solid #d2b48c;
+  padding-bottom: 0.3rem;
+}
 
   .prato-btn {
     display: block;
-    background-color: #fafafa;
+    background-color: #e0d5cb;
     width: 100%;
     border: none;
     padding: 1rem;
-    border-radius: var(--radius);
+    border-radius: 12px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -307,21 +321,21 @@ section img {
   .prato-btn img {
     width: 100%;
     height: auto;
-    border-radius: var(--radius);
+    border-radius: 12px;
     object-fit: cover;
     margin-bottom: 1rem;
   }
   
   .prato-btn strong {
     font-size: 1.2rem;
-    color: var(--primary-color);
+    color: #b71c1c;
     display: block;
     margin-bottom: 0.5rem;
   }
   
   .prato-btn.indisponivel {
     opacity: 0.6;
-    pointer-events: none;
+    
   }
   
   .prato-btn .vegetariano {
@@ -334,44 +348,9 @@ section img {
     color: red;
   }
 
-
-/* Container do Cardápio */
-#cardapio .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    justify-items: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Estilos de Indisponibilidade */
-.indisponivel img {
-    filter: grayscale(100%);
-}
-
-/* Estilo dos botões do cardápio */
-#cardapio button {
-    margin: 5% auto;
-    display: block;
-}
-
-/* Títulos das seções */
-#cardapio h2 {
-    font-size: 150%;
-    margin-top: 5%;
-    margin-bottom: 3%;
-    text-align: center;
-    color: #333333;
-    font-weight: bold;
-    border-bottom: 0.2em solid #ccc;
-    padding-bottom: 1%;
-}
-
-/* Estilos do Formulário de Pedido */
+/* Formulário de Substituição */
 #formulario-pedido {
-    background-color: #f4f4f4; /* Alterado para cinza claro */
+    background-color: #f4f4f4; 
     padding: 3%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -382,10 +361,9 @@ section img {
     top: 20%;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 100; /* Garantir que o formulário fique sobre os outros elementos */
+    z-index: 100; 
 }
 
-/* Título do Formulário */
 #formulario-pedido h3 {
     color: #d32f2f;
     font-size: 1.8rem;
@@ -393,7 +371,6 @@ section img {
     text-align: center;
 }
 
-/* Estilos dos campos do formulário */
 #formulario-pedido label {
     font-size: 1.1rem;
     color: #333;
@@ -410,7 +387,7 @@ section img {
     margin-bottom: 2%;
 }
 
-/* Botões do formulário */
+
 #formulario-pedido button {
     background-color: #d32f2f;
     color: white;
@@ -418,29 +395,25 @@ section img {
     border: none;
     border-radius: 5px;
     font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
     width: 100%;
     margin-bottom: 1%;
 }
 
-/* Hover no botão */
+
 #formulario-pedido button:hover {
     background-color: #c62828;
 }
 
-/* Botão de Cancelar */
 #cancelar-form {
     background-color: #aaa;
     width: 100%;
 }
 
-/* Hover no botão de cancelar */
+
 #cancelar-form:hover {
     background-color: #777;
 }
 
-/* Fundo escurecido atrás do formulário */
 #formulario-pedido::before {
     content: "";
     position: fixed;
@@ -453,92 +426,104 @@ section img {
 }
 
 
-h1 {
-    color: #d32f2f;
-    text-align: center;
-    font-size: 2rem;
-    margin-top: 2%;
-}
+/* css do carrinho de compras */
+
 
 #lista-carrinho {
-    padding: 3%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 2%;
+  padding: 3%;
+  max-width: 1000px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 #lista-carrinho .pedido {
-    display: flex;
-    justify-content: space-between;
-    padding: 2%;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#lista-carrinho .pedido:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 #lista-carrinho .pedido .info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 #lista-carrinho .pedido .info span {
-    font-size: 1rem;
-    color: #333;
+  font-size: 1.05rem;
+  color: #444;
 }
 
 #lista-carrinho .pedido .preco {
-    font-weight: bold;
-    color: #d32f2f;
-    font-size: 1.1rem;
+  font-weight: bold;
+  color: #d32f2f;
+  font-size: 1.2rem;
+}
+
+h1, h2.finalizar-pedido {
+  text-align: center;
+  color: #d32f2f;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #form-final {
-    margin: 0 auto; 
-    padding: 20px;
-    width: 100%; 
-    max-width: 600px; 
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center; 
+  margin: 40px auto;
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  background-color: #ff3838;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
 
 #form-final label {
-    display: block; 
-    margin-bottom: 10px; 
-    font-size: 1.1rem;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #ffffff;
+  font-weight: 500;
 }
 
 #form-final input,
 #form-final select {
-    width: 100%; 
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fafafa;
 }
 
 #form-final button {
-    background-color: #d32f2f;
-    color: white;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%;
+  background-color: #aa1414;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 100%;
 }
 
 #form-final button:hover {
-    background-color: #c62828;
+  background-color: #c62828;
+  transform: translateY(-2px);
 }
 
-.finalizar-pedido {
-    text-align: center; 
-    margin: 20px auto; 
-}
+

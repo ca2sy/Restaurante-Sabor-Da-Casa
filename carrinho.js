@@ -12,11 +12,7 @@ function mostrarCarrinho() {
     div.classList.add("pedido"); 
     
 
-    const img = document.createElement("img");
-    img.src = item.imagem; 
-    img.alt = item.nomePrato;
-    img.classList.add("imagem-prato");  
-    
+
  
     div.innerHTML = `
       <strong>${item.nomePrato}</strong> - R$ ${item.preco.toFixed(2)}<br>
@@ -25,7 +21,7 @@ function mostrarCarrinho() {
     `;
     
 
-    div.prepend(img); 
+
     
     lista.appendChild(div);
   });

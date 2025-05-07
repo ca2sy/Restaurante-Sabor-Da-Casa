@@ -8,30 +8,30 @@ const cancelarBtn = document.getElementById("cancelar-form");
 
 let pratoSelecionado = null;
 
-async function carregarCardapio() {
+async function carregarCardapio() { //aq função de mostrar os pratos que estão na api
   const pratosRef = collection(db, "pratos");
-  const snapshot = await getDocs(pratosRef);
+  const snapshot = await getDocs(pratosRef); //"pedindo documentos da coleção pratos do firebase"
 
   cardapioEl.innerHTML = ""; 
 
-  // Estruturas para os tipos de prato
+  // criando estruturas para os tipos de prato
   const tipos = {
     prato: { titulo: "Pratos Principais", container: document.createElement("div") },
     sobremesa: { titulo: "Sobremesas", container: document.createElement("div") },
     bebida: { titulo: "Bebidas", container: document.createElement("div") }
   };
 
-  // Estilizando os containers para cada tipo de prato
+//pondo eles num container
   for (const tipo in tipos) {
     tipos[tipo].container.classList.add("container");
   }
 
-  // Loop para adicionar os pratos
+//criando loop pra adicionar os pratos, tive ajuda do tutorial do youtube nessa parte.
   snapshot.forEach(doc => {
     const prato = doc.data();
     const tipo = prato.tipo?.toLowerCase(); 
 
-    if (!tipos[tipo]) return; // Verifica se o tipo existe
+    if (!tipos[tipo]) return; 
 
     const botao = document.createElement("button");
     botao.classList.add("prato-btn");
@@ -42,8 +42,8 @@ async function carregarCardapio() {
       <strong>${prato.nome}</strong><br>
       R$ ${Number(prato.preco).toFixed(2)}<br>
       ${prato.descricao}<br>
-      ${prato.vegetariano ? "<span class='vegetariano'>Vegetariano</span>" : ""}
-      ${prato.alergicos ? "<span class='alergicos'>Contém alérgenos: " + prato.alergicos + "</span>" : ""}
+      ${prato.vegetariano ? "<span class='vegetariano'>Vegetariano</span> <br>" : ""}
+      ${prato.alergico ? "<span class='alergicos'>Contém alérgenos: " + prato.alergico + "</span>" : ""}
     `;
 
     botao.onclick = () => {
@@ -58,7 +58,7 @@ async function carregarCardapio() {
     tipos[tipo].container.appendChild(botao);
   });
 
-  // Adiciona os títulos e os contêineres ao cardápio
+  // adiciona os títulos e os contêineres ao cardápio
   for (const tipo of ["prato", "sobremesa", "bebida"]) {
     const { titulo, container } = tipos[tipo];
     if (container.childNodes.length > 0) {
@@ -70,7 +70,7 @@ async function carregarCardapio() {
   }
 }
 
-// Processamento do formulário de pedido
+// enviando pedidos pro firebase com alterações feitas pelo cliente
 formSub.onsubmit = (e) => {
   e.preventDefault();
   const alteracoes = document.getElementById("alteracoes").value;
@@ -82,7 +82,7 @@ formSub.onsubmit = (e) => {
   };
 
   const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-  carrinho.push(pedido);
+  carrinho.push(pedido); //push aqui
   localStorage.setItem("carrinho", JSON.stringify(carrinho));
 
   alert("Pedido adicionado ao carrinho!");
@@ -90,7 +90,7 @@ formSub.onsubmit = (e) => {
   formulario.style.display = "none";
 };
 
-// Cancela o pedido e esconde o formulário
+// cancela o pedido 
 cancelarBtn.onclick = () => {
   formSub.reset();
   formulario.style.display = "none";
