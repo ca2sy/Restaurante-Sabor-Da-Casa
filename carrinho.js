@@ -1,30 +1,28 @@
-import { db } from './firebase.js';
-import { collection, addDoc } from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js';
-
 const lista = document.getElementById("lista-carrinho");
+const mensagemCarrinhoVazio = document.getElementById("mensagem-carrinho-vazio");
 const form = document.getElementById("form-final");
 let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
 function mostrarCarrinho() {
   lista.innerHTML = "";
-  carrinho.forEach((item, index) => {
-    const div = document.createElement("div");
-    div.classList.add("pedido"); 
-    
+  
+  if (carrinho.length === 0) {
+    mensagemCarrinhoVazio.style.display = "block"; 
+  } else {
+    mensagemCarrinhoVazio.style.display = "none"; 
+    carrinho.forEach((item, index) => {
+      const div = document.createElement("div");
+      div.classList.add("pedido");
 
-
- 
-    div.innerHTML = `
-      <strong>${item.nomePrato}</strong> - R$ ${item.preco.toFixed(2)}<br>
-      Substituições: ${item.alteracoes || "Nenhuma"}<br>
-      <button onclick="removerPedido(${index})">Remover</button><br><br>
-    `;
-    
-
-
-    
-    lista.appendChild(div);
-  });
+      div.innerHTML = `
+        <strong>${item.nomePrato}</strong> - R$ ${item.preco.toFixed(2)}<br>
+        Substituições: ${item.alteracoes || "Nenhuma"}<br>
+        <button onclick="removerPedido(${index})">Remover</button><br><br>
+      `;
+      
+      lista.appendChild(div);
+    });
+  }
 }
 
 window.removerPedido = function(index) {
