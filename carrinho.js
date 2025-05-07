@@ -41,10 +41,28 @@ form.onsubmit = async (e) => {
     return;
   }
 
+  const nomeCliente = document.getElementById("nome").value.trim();
+  if (nomeCliente === "") {
+    alert("Por favor, informe o seu nome.");
+    return;
+  }
+
+  const pagamento = document.getElementById("pagamento").value;
+  if (pagamento === "") {
+    alert("Por favor, selecione a forma de pagamento.");
+    return;
+  }
+
+  const entrega = document.getElementById("entrega").value;
+  if (entrega === "") {
+    alert("Por favor, selecione uma opção para entrega/retirada/consumo local.");
+    return;
+  }
+
   const pedidoFinal = {
-    nomeCliente: document.getElementById("nome").value,
-    pagamento: document.getElementById("pagamento").value,
-    entrega: document.getElementById("entrega").value,
+    nomeCliente,
+    pagamento,
+    entrega,
     pedidos: carrinho,
     criadoEm: new Date()
   };
