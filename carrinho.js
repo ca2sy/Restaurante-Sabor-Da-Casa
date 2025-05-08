@@ -1,3 +1,7 @@
+import { db } from './firebase.js';
+import { collection, addDoc } from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js';
+
+
 const lista = document.getElementById("lista-carrinho");
 const mensagemCarrinhoVazio = document.getElementById("mensagem-carrinho-vazio");
 const form = document.getElementById("form-final");
@@ -69,11 +73,14 @@ form.onsubmit = async (e) => {
     await addDoc(collection(db, "pedidos"), pedidoFinal);
     alert("Pedido enviado com sucesso!");
     localStorage.removeItem("carrinho");
+    carrinho = [];  
+    mostrarCarrinho();
     window.location.href = "index.html";
   } catch (e) {
     console.error("Erro ao enviar:", e);
     alert("Erro ao enviar pedido.");
   }
+
 };
 
 mostrarCarrinho();

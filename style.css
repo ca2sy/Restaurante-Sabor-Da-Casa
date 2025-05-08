@@ -1,6 +1,4 @@
-
-  
-  * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -84,34 +82,30 @@
   }
 
   .intro,
-.pratos,
-.endereco {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
+  .pratos,
+  .endereco {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    padding: 3%;
+  }
   
-section img {
+
+  section img {
     width: 100%;
     max-width: 420px;
     border-radius: 2px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   }
   
-  
-  .intro,
-  .pratos,
-  .endereco {
-    padding: 3%;
-  }
-  
+ 
   .intro .container,
   .pratos .container,
   .endereco .container {
     display: flex;
     align-items: center;
     gap: 2rem;
+    flex-wrap: wrap; 
   }
   
   .intro h1,
@@ -132,12 +126,14 @@ section img {
     color: #555;
   }
   
+
   .endereco .mapa img {
     width: 100%;
     max-width: 300px;
     border-radius: 10px;
   }
   
+
   footer {
     background-color: #b71c1c;
     color: white;
@@ -155,92 +151,281 @@ section img {
     text-decoration: none;
   }
   
-  footer .contato a:hover {
-    text-decoration: underline;
-  }
-  
 
-  /* css da parte Sobre nós  */ 
+
 
 .historia-intro .imagem img {
-    max-height: 400px;
-   
-  }
-  
-  .historia-familia .imagem img {
-    max-height: 500px;
-  
-  }
-  
-  .crescimento .imagem img {
-    max-height: 450px;
-    
-  }
-  
-  .comunidade .imagem img {
-    max-height: 450px;
-   
-  }
-  
- 
-  .texto {
-    flex: 1;
-    padding: 2rem;
-  }
-  
-  .texto h2 {
-    position: relative;
-    padding-bottom: 0.5rem;
-  }
-  
-  .texto h2::after {
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 4px;
-    background-color:  #ff7043;
-    left: 0;
-    bottom: 0;
-  }
-  
-  .texto p {
-    font-size: 1.2rem;
-    color: #555;
-    line-height: 1.7;
-  }
-  
-  .historia-intro .container,
-  .historia-familia .container,
-  .crescimento .container,
-  .comunidade .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .historia-intro .container .imagem,
-  .historia-familia .container .imagem,
-  .crescimento .container .imagem,
-  .comunidade .container .imagem {
-    flex: 1;
-    max-width: 45%;
-  }
-  
-  .historia-intro .container .texto,
-  .historia-familia .container .texto,
-  .crescimento .container .texto,
-  .comunidade .container .texto {
-    flex: 1;
-    max-width: 50%;
-  }
-  
+  max-height: 400px;
+  width: 100%;
+  object-fit: cover; 
+}
+
+.historia-familia .imagem img {
+  max-height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.crescimento .imagem img {
+  max-height: 450px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.comunidade .imagem img {
+  max-height: 450px;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.texto {
+  flex: 1;
+  padding: 2rem;
+}
+
+.texto h2 {
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.texto h2::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background-color: #ff7043;
+  left: 0;
+  bottom: 0;
+}
+
+.texto p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+
+.historia-intro .container,
+.historia-familia .container,
+.crescimento .container,
+.comunidade .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+}
+
+
+.historia-intro .container .imagem,
+.historia-familia .container .imagem,
+.crescimento .container .imagem,
+.comunidade .container .imagem {
+  flex: 1;
+  max-width: 45%;
+}
+
+.historia-intro .container .texto,
+.historia-familia .container .texto,
+.crescimento .container .texto,
+.comunidade .container .texto {
+  flex: 1;
+  max-width: 50%;
+}
+
 
 .historia-familia .container,
 .comunidade .container {
   flex-direction: row-reverse;
 }
 
+
+@media screen and (max-width: 768px) {
+ 
+  .historia-intro .container,
+  .historia-familia .container,
+  .crescimento .container,
+  .comunidade .container {
+    flex-direction: column; 
+    align-items: center; 
+
+
+  .historia-intro .container .imagem,
+  .historia-familia .container .imagem,
+  .crescimento .container .imagem,
+  .comunidade .container .imagem {
+    max-width: 100%;
+    margin-bottom: 1rem; 
+  }
+
+  .historia-intro .container .texto,
+  .historia-familia .container .texto,
+  .crescimento .container .texto,
+  .comunidade .container .texto {
+    max-width: 100%;
+  }
+
+
+  .texto p {
+    font-size: 1rem;
+  }
+}
+
+}
+
+@media screen and (max-width: 480px) {
+
+  .texto p {
+    font-size: 0.9rem; 
+  }
+
+  .historia-intro .container .imagem,
+  .historia-familia .container .imagem,
+  .crescimento .container .imagem,
+  .comunidade .container .imagem {
+    max-height: 300px; 
+  }
+
+  .historia-intro .container .texto,
+  .historia-familia .container .texto,
+  .crescimento .container .texto,
+  .comunidade .container .texto {
+    padding: 1rem;
+  }
+}
+
+
+
+  /* css da parte Sobre nós  */ 
+
+
+.historia-intro .imagem img {
+  max-height: 400px;
+  width: 100%;
+  object-fit: cover; 
+}
+
+.historia-familia .imagem img {
+  max-height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.crescimento .imagem img {
+  max-height: 450px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.comunidade .imagem img {
+  max-height: 450px;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.texto {
+  flex: 1;
+  padding: 2rem;
+}
+
+.texto h2 {
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.texto h2::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background-color: #ff7043;
+  left: 0;
+  bottom: 0;
+}
+
+.texto p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+
+.historia-intro .container,
+.historia-familia .container,
+.crescimento .container,
+.comunidade .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+}
+
+
+.historia-intro .container .imagem,
+.historia-familia .container .imagem,
+.crescimento .container .imagem,
+.comunidade .container .imagem {
+  flex: 1;
+  max-width: 45%;
+}
+
+.historia-intro .container .texto,
+.historia-familia .container .texto,
+.crescimento .container .texto,
+.comunidade .container .texto {
+  flex: 1;
+  max-width: 50%;
+}
+
+
+.historia-familia .container,
+.comunidade .container {
+  flex-direction: row-reverse;
+}
+
+
+@media screen and (max-width: 768px) {
+ 
+  .historia-intro .container,
+  .historia-familia .container,
+  .crescimento .container,
+  .comunidade .container {
+    flex-direction: column; 
+    align-items: center;
+  }
+
   
+  .historia-intro .container .imagem,
+  .historia-familia .container .imagem,
+  .crescimento .container .imagem,
+  .comunidade .container .imagem {
+    max-width: 100%; 
+    margin-bottom: 1rem;
+  }
+
+  .historia-intro .container .texto,
+  .historia-familia .container .texto,
+  .crescimento .container .texto,
+  .comunidade .container .texto {
+    max-width: 100%; /* O texto ocupa toda a largura disponível */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .texto p {
+    font-size: 0.9rem; 
+  }
+
+  .historia-intro .container .imagem,
+  .historia-familia .container .imagem,
+  .crescimento .container .imagem,
+  .comunidade .container .imagem {
+    max-height: 300px; 
+  }
+
+
+}
 
 /* css cardapio */
 
@@ -425,6 +610,79 @@ section img {
     z-index: -1;
 }
 
+@media screen and (max-width: 768px) {
+  #cardapio .container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  .prato {
+    max-width: 100%;
+    padding: 8px;
+  }
+
+  .prato-btn {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .prato-btn strong {
+    font-size: 1rem;
+  }
+
+  .prato-btn .vegetariano,
+  .prato-btn .alergicos {
+    font-size: 0.9rem;
+  }
+
+  #formulario-pedido {
+    width: 90%;
+    max-width: 90%;
+    padding: 5%;
+    top: 10%;
+  }
+
+  #formulario-pedido h3 {
+    font-size: 1.5rem;
+  }
+
+  #formulario-pedido input[type="text"] {
+    padding: 2%;
+  }
+
+  #formulario-pedido button {
+    padding: 3%;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #cardapio .container {
+    grid-template-columns: 1fr;
+  }
+
+  .prato-btn {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .prato-btn strong {
+    font-size: 0.95rem;
+  }
+
+  .prato-btn .vegetariano,
+  .prato-btn .alergicos {
+    font-size: 0.85rem;
+  }
+
+  #formulario-pedido h3 {
+    font-size: 1.3rem;
+  }
+
+  #formulario-pedido button {
+    padding: 4%;
+  }
+}
 
 /* css do carrinho de compras */
 
@@ -542,3 +800,74 @@ h1, h2.finalizar-pedido {
 }
 
 
+@media screen and (max-width: 768px) {
+  #mensagem-carrinho-vazio {
+    font-size: 14px;
+    padding: 12px;
+    max-width: 90%;
+  }
+
+  #lista-carrinho {
+    padding: 5%;
+    gap: 15px;
+  }
+
+  #lista-carrinho .pedido {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  #lista-carrinho .pedido .preco {
+    font-size: 1.1rem;
+    align-self: flex-end;
+  }
+
+  #form-final {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  #form-final label {
+    font-size: 1rem;
+  }
+
+  #form-final input,
+  #form-final select {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  #form-final button {
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #mensagem-carrinho-vazio {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  #lista-carrinho .pedido {
+    padding: 12px;
+  }
+
+  #lista-carrinho .pedido .info span {
+    font-size: 0.95rem;
+  }
+
+  #lista-carrinho .pedido .preco {
+    font-size: 1rem;
+  }
+
+  #form-final {
+    padding: 15px;
+  }
+
+  #form-final button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
