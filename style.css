@@ -74,6 +74,20 @@
     background-color: #ff7043;
     color: white;
   }
+
+@media screen and (max-width: 768px) {
+  nav.menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  nav.menu a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
   
   
   section {
